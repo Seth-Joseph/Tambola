@@ -174,13 +174,12 @@ def gameWindow():
 
     canvas2 = Canvas( gameWindow, width = 500,height = 500)
     canvas2.pack(fill = "both", expand = True)
-    canvas2.create_text(37,750, text = "Stage 3", font=("Comic Sans MS",15), fill="white")
     canvas2.create_image( 0, 0, image = bg, anchor = "nw")
 
     createTicket()
     placeNumbers()
 
-    warning = canvas2.create_text(160,13, text = "Waiting for other players to join...", font=("Comic Sans MS",15), fill="white")
+    warning = canvas2.create_text(160,13, text = "Waiting for more players to join...", font=("Comic Sans MS",15), fill="white")
     flashNumberLabel = canvas2.create_text(screen_width/2,200, text = "", font=("Comic Sans MS",30), fill="#3e2723")
 
     gameWindow.resizable(True, True)
@@ -222,7 +221,6 @@ def askPlayerName():
 
     canvas1.create_image( 0, 0, image = bg, anchor = "nw")
     canvas1.create_text( screen_width/2, screen_height/4 +110, text = "Enter Name", font=("Comic Sans MS",30), fill="white")
-    canvas1.create_text(37,750, text = "Stage 2", font=("Comic Sans MS",15), fill="white")
 
     nameEntry = Entry(nameWindow, width=15, justify='center', font=('Comic Sans MS', 25), bd=0, bg='white')
     nameEntry.place(x = screen_width/3+80, y=screen_height/2-20)
